@@ -32,6 +32,7 @@ struct AsyncImage<Placeholder: View>: View {
     private let placeholder: Placeholder?
     
     init(url: URL, placeholder: Placeholder? = nil) {
+        print(url)
         loader = ImageLoader(url: url)
         self.placeholder = placeholder
     }

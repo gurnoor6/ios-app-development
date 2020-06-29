@@ -26,8 +26,8 @@ struct Media: Codable, Identifiable, Hashable {
 }
 
 class Api{
-    func getPosts(completion: @escaping ([myItem])->()){
-        guard let url = URL(string : "https://api.flickr.com/services/feeds/photos_public.gne?tags=kitten&format=json&nojsoncallback=1") else {return}
+    func getPosts(url:String, completion: @escaping ([myItem])->()){
+        guard let url = URL(string : url) else {return}
         
         URLSession.shared.dataTask(with: url){ (data, _, _) in
             let decoder = JSONDecoder()

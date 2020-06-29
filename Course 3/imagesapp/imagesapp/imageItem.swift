@@ -11,7 +11,7 @@ struct imageItem: View {
     var item: myItem
     
     var body: some View {
-        ScrollView {
+        ScrollView{
             AsyncImage(url: URL(string: item.media.m.replacingOccurrences(of: "\\", with: ""))!, placeholder: Text("Loading..")
             )
             .aspectRatio(contentMode: .fill)
@@ -21,10 +21,10 @@ struct imageItem: View {
             
             VStack(alignment: .leading, spacing: 5){
                 Text(item.title)
-                    .font(.headline)
+                    .font(.system(size: 25, weight: .bold, design: .default))
                     .foregroundColor(.primary)
                 Text(item.description)
-                    .font(.subheadline)
+                    .font(.system(size: 20, design: .default))
                     .foregroundColor(.primary) .multilineTextAlignment(.leading)
                 .lineLimit(2)
                     .frame(height: 40)

@@ -9,25 +9,25 @@
 import SwiftUI
 
 struct ContentView: View {
-    let url = URL(string: "https://live.staticflickr.com/65535/50058717026_0d1faa1b1e_m.jpg")!
-    @State var posts:[myItem] = []
+//    let url = URL(string: "https://live.staticflickr.com/65535/50058717026_0d1faa1b1e_m.jpg")!
+//    @State var posts:[myItem] = []
     var body: some View {
-        List(posts, id:\.id){post in
-            Text(post.title)
-            AsyncImage(
-                url: self.url,
-                placeholder: Text("Loading ...")
-            ).aspectRatio(contentMode: .fit)
-        }
-
-            
-        .onAppear{
-            Api().getPosts{
-                (posts) in self.posts = posts
-            }
-        }
+//        List(posts, id:\.id){post in
+//            Text(post.title)
+//            AsyncImage(
+//                url: self.url,
+//                placeholder: Text("Loading ...")
+//            ).aspectRatio(contentMode: .fit)
+//        }
+//
+//
+//        .onAppear{
+//            Api().getPosts{
+//                (posts) in self.posts = posts
+//            }
+//        }
         
-        
+         HomeView()
     }
 }
 

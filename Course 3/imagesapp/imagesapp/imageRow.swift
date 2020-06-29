@@ -8,38 +8,37 @@
 
 import SwiftUI
 
-struct DrinkRow: View {
-//    var categoryName:String
+struct imageRow: View {
+    var category:String
     @State var items:[myItem] = []
     var body: some View {
-
-        VStack(alignment: .leading) {
-                    Text("self.categoryName")
-                        .font(.title)
-                        .foregroundColor(.primary)
-                    ScrollView(.horizontal, showsIndicators: false){
-                        HStack(alignment: .top) {
-                            ForEach(self.items, id: \.id){
-                                item in
-                                
-//                                NavigationLink(destination: DrinkDetail(item : item)){
-                                    imageItem(item:item)
-                                        .frame(width:300)
-                                        .padding(.trailing,30)
-//                                    }
+            VStack(alignment: .leading) {
+                Text(self.category.uppercased())
+                    .font(.system(size: 40, weight: .heavy, design: .default))
+                            .foregroundColor(.primary)
+                        ScrollView(.horizontal, showsIndicators: false){
+                            HStack(alignment: .top) {
+                                ForEach(self.items, id: \.id){
+                                    item in
+                                    
+                                    NavigationLink(destination: imageDetail(item:item)){
+                                        imageItem(item:item)
+                                            .frame(width:300)
+                                            .padding(.trailing,30)
+                                        }
+                                }
+                            }.onAppear{
+                                Api().getPosts(url:"https://api.flickr.com/services/feeds/photos_public.gne?tags=\(self.category)&format=json&nojsoncallback=1",completion: {
+                                    (posts) in self.items = posts
+                                })
                             }
-                        }.onAppear{
-                            Api().getPosts(completion: {
-                                (posts) in self.items = posts
-                            })
                         }
-                    }
-            }
+            }.padding(.leading, 20)
     }
 }
 
-struct DrinkRow_Previews: PreviewProvider {
+struct imageRow_Previews: PreviewProvider {
     static var previews: some View {
-        DrinkRow()
+        imageRow(category: "kitten")
     }
 }
