@@ -9,8 +9,13 @@
 import SwiftUI
 
 struct HomeView: View {
+@State var kittenData:[Item] = []
     init(){
         UITableView.appearance().separatorColor = .clear
+        Api().getPosts(completion: {
+            posts in
+            self.kittenData = posts
+        })
     }
     
     
@@ -23,14 +28,12 @@ struct HomeView: View {
     
     var body: some View {
         NavigationView{
-        List(categories.keys.sorted(), id:\String.self){
-                key in
-                DrinkRow(categoryName: "\(key)Drinks".uppercased(), drinks: self.categories[key]!)
-                    .frame(height:450)
-                    .padding(.top)
-                    .padding(.bottom)
-                
-            }
+            
+        DrinkRow(categoryName: "Kittens".uppercased(), kittens: kittenData)
+        .frame(height:450)
+        .padding(.top)
+        .padding(.bottom)
+            
         .navigationBarTitle(Text("COFFEE DB"))
         }.accentColor(.white)
     }

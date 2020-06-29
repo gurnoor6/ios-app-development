@@ -9,11 +9,11 @@
 import SwiftUI
 
 struct DrinkItem: View {
-    var drink:Drink
+    var kitten:Item
     
     var body: some View {
         VStack(alignment: .leading, spacing:16) {
-            Image(drink.imageName)
+            Image(kitten.media.m)
             .resizable()
             .renderingMode(.original)
             .aspectRatio(contentMode: .fill)
@@ -22,10 +22,10 @@ struct DrinkItem: View {
                 .shadow(radius: 10)
             
             VStack(alignment: .leading, spacing: 5){
-                Text(drink.name)
+                Text(kitten.title)
                     .font(.headline)
                     .foregroundColor(.primary)
-                Text(drink.description)
+                Text("no description available for this kitten")
                     .font(.subheadline)
                     .foregroundColor(.primary) .multilineTextAlignment(.leading)
                 .lineLimit(2)
@@ -38,6 +38,6 @@ struct DrinkItem: View {
 
 struct DrinkItem_Previews: PreviewProvider {
     static var previews: some View {
-        DrinkItem(drink:drinkData[0])
+        DrinkItem(kitten:kittenData[0])
     }
 }

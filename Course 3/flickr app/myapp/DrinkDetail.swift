@@ -9,11 +9,11 @@
 import SwiftUI
 
 struct DrinkDetail: View {
-    var drink : Drink
+    var kitten : Item
     var body: some View {
         List{
             ZStack(alignment: .bottom) {
-                Image(drink.imageName)
+                Image(kitten.media.m)
                 .resizable()
                 .aspectRatio(contentMode: .fit)
                 Rectangle()
@@ -22,7 +22,7 @@ struct DrinkDetail: View {
                 .blur(radius: 10)
                 HStack{
                     VStack(alignment: .leading, spacing: 8){
-                        Text(drink.name)
+                        Text(kitten.title)
                         .font(.largeTitle)
                     .foregroundColor(.white)
                     }
@@ -35,7 +35,7 @@ struct DrinkDetail: View {
             .listRowInsets(EdgeInsets())
             
             VStack {
-                Text(drink.description)
+                Text("drink.description")
                 .foregroundColor(.primary)
                 .font(.body)
                 .lineLimit(nil)
@@ -57,7 +57,7 @@ struct DrinkDetail: View {
 }
 
 struct OrderButton: View{
-    @State var posts:[Post] = []
+    @State var posts:[Response] = []
     var body: some View{
         Button(action:{Api().getPosts{posts in }}){
                    Text("Order Now")
@@ -74,6 +74,6 @@ struct OrderButton: View{
 
 struct DrinkDetail_Previews: PreviewProvider {
     static var previews: some View {
-        DrinkDetail(drink: drinkData[3])
+        DrinkDetail(kitten: kittenData[3])
     }
 }
