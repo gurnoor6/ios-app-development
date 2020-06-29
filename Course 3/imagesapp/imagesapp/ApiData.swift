@@ -7,57 +7,43 @@
 
 import SwiftUI
 
-struct Response: Codable, Identifiable, Hashable{
+struct Response: Decodable, Hashable, Identifiable {
     let id = UUID()
-    let items: Post
+    var items: [myItem]
 }
 
-struct Media: Codable, Identifiable, Hashable{
+struct myItem: Decodable,Identifiable, Hashable {
     let id = UUID()
-    let imageName:String
-    private enum CodingKeys: String, CodingKey{
-        case imageName="m"
-    }
+    let title, link: String
+    let media: Media
+    let dateTaken, description, published, author: String
+    let authorId, tags: String
 }
 
-struct Post: Codable, Identifiable, Hashable{
+struct Media: Codable, Identifiable, Hashable {
     let id = UUID()
-    var name: String //title
-//    var userId: Int
-    var imageName:String
-    var category: Category
-    var description: String
-    
-    enum Category:String, CaseIterable,Codable, Hashable{
-        case hot="hot"
-        case cold="cold"
-    }
+    let m: String
 }
 
 class Api{
-    func getPosts(completion: @escaping ([Post])->()){
-        guard let url = URL(string : "http://api.flickr.com/services/feeds/photos_public.gne?tags=kitten&format=json&nojsoncallback=1") else {return}
+    func getPosts(completion: @escaping ([myItem])->()){
+        guard let url = URL(string : "https://api.flickr.com/services/feeds/photos_public.gne?tags=kitten&format=json&nojsoncallback=1") else {return}
         
         URLSession.shared.dataTask(with: url){ (data, _, _) in
-//            if let response = try! JSONDecoder().decode([Response]?.self, from: data!){
-//
-//                print(response)
-//
-////                DispatchQueue.main.async{
-////                    print(posts)
-////                    completion(posts)
-////                }
-//            }
-//            else{
-//                print("error occured")
-//            }
-//            var str = String(data: data!, encoding: .utf8)
-//            print(str)
-            let json = try? JSONSerialization.jsonObject(with: data!, options: [])
-            let x = json! as? [String:Any]
-            print(x)
+            let decoder = JSONDecoder()
+            decoder.keyDecodingStrategy = .convertFromSnakeCase
+            if let response = try! decoder.decode(Response?.self, from: data!){
+
+                DispatchQueue.main.async{
+//                    print(response.items)
+                    completion(response.items)
+                }
+            }
+            else{
+                print("error occured")
+            }
+            
         }
     .resume()
-        
     }
 }

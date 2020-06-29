@@ -17,6 +17,9 @@
 		FE12687124AA554E006D48E4 /* imagesappTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE12687024AA554E006D48E4 /* imagesappTests.swift */; };
 		FE12687C24AA554F006D48E4 /* imagesappUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE12687B24AA554F006D48E4 /* imagesappUITests.swift */; };
 		FE12688A24AA5755006D48E4 /* ApiData.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE12688924AA5755006D48E4 /* ApiData.swift */; };
+		FE45EA1724AA60FA00D6B7D5 /* imageLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE45EA1624AA60FA00D6B7D5 /* imageLoader.swift */; };
+		FE45EA1924AA63E000D6B7D5 /* imageItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE45EA1824AA63E000D6B7D5 /* imageItem.swift */; };
+		FE45EA1B24AA682B00D6B7D5 /* imageRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE45EA1A24AA682B00D6B7D5 /* imageRow.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +56,9 @@
 		FE12687B24AA554F006D48E4 /* imagesappUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = imagesappUITests.swift; sourceTree = "<group>"; };
 		FE12687D24AA554F006D48E4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FE12688924AA5755006D48E4 /* ApiData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiData.swift; sourceTree = "<group>"; };
+		FE45EA1624AA60FA00D6B7D5 /* imageLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = imageLoader.swift; sourceTree = "<group>"; };
+		FE45EA1824AA63E000D6B7D5 /* imageItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = imageItem.swift; sourceTree = "<group>"; };
+		FE45EA1A24AA682B00D6B7D5 /* imageRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = imageRow.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,6 +118,9 @@
 				FE12686724AA554E006D48E4 /* Info.plist */,
 				FE12685A24AA554C006D48E4 /* imagesapp.xcdatamodeld */,
 				FE12686124AA554E006D48E4 /* Preview Content */,
+				FE45EA1624AA60FA00D6B7D5 /* imageLoader.swift */,
+				FE45EA1824AA63E000D6B7D5 /* imageItem.swift */,
+				FE45EA1A24AA682B00D6B7D5 /* imageRow.swift */,
 			);
 			path = imagesapp;
 			sourceTree = "<group>";
@@ -273,9 +282,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FE45EA1724AA60FA00D6B7D5 /* imageLoader.swift in Sources */,
 				FE12685724AA554C006D48E4 /* AppDelegate.swift in Sources */,
 				FE12688A24AA5755006D48E4 /* ApiData.swift in Sources */,
 				FE12685924AA554C006D48E4 /* SceneDelegate.swift in Sources */,
+				FE45EA1B24AA682B00D6B7D5 /* imageRow.swift in Sources */,
+				FE45EA1924AA63E000D6B7D5 /* imageItem.swift in Sources */,
 				FE12685E24AA554C006D48E4 /* ContentView.swift in Sources */,
 				FE12685C24AA554C006D48E4 /* imagesapp.xcdatamodeld in Sources */,
 			);
