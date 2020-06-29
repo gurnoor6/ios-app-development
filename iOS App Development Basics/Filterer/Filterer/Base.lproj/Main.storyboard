@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15400" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15404"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Filterer" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Jas-vc-jne">
+                                <rect key="frame" x="0.0" y="44" width="414" height="725"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="725" id="Wn9-2G-8Uj"/>
+                                </constraints>
+                            </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="Pz9-jA-s3H">
+                                <rect key="frame" x="0.0" y="769" width="414" height="84"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Yxs-KW-5Nu">
+                                        <rect key="frame" x="0.0" y="0.0" width="103.5" height="84"/>
+                                        <state key="normal" title="Choose Image"/>
+                                        <connections>
+                                            <action selector="chooseImage:" destination="BYZ-38-t0r" eventType="touchUpInside" id="xMx-25-Yfp"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6NV-U1-3pJ">
+                                        <rect key="frame" x="103.5" y="0.0" width="103.5" height="84"/>
+                                        <state key="normal" title="Filters"/>
+                                        <connections>
+                                            <action selector="filtersActionSheet:" destination="BYZ-38-t0r" eventType="touchUpInside" id="DpG-h8-mTB"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VaA-Zg-oIk">
+                                        <rect key="frame" x="207" y="0.0" width="103.5" height="84"/>
+                                        <state key="normal" title="Compare"/>
+                                        <connections>
+                                            <action selector="compareImage:" destination="BYZ-38-t0r" eventType="touchUpInside" id="qVF-LA-gj9"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ckI-4m-jyr">
+                                        <rect key="frame" x="310.5" y="0.0" width="103.5" height="84"/>
+                                        <state key="normal" title="Share"/>
+                                        <connections>
+                                            <action selector="shareImage:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Nt3-N6-BTn"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AI5-eA-a8n">
+                                <rect key="frame" x="207" y="54" width="0.0" height="0.0"/>
+                                <color key="backgroundColor" red="0.26617147020725385" green="0.26617147020725385" blue="0.26617147020725385" alpha="0.33316687810687656" colorSpace="custom" customColorSpace="displayP3"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <color key="textColor" systemColor="secondarySystemBackgroundColor" red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="AI5-eA-a8n" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="10" id="Htd-Nc-1xv"/>
+                            <constraint firstItem="Jas-vc-jne" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Jab-nw-xaE"/>
+                            <constraint firstItem="Jas-vc-jne" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="SZe-ZK-jG3"/>
+                            <constraint firstItem="AI5-eA-a8n" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Zgf-Si-UaM"/>
+                            <constraint firstItem="Pz9-jA-s3H" firstAttribute="leading" secondItem="Jas-vc-jne" secondAttribute="leading" id="bt0-X8-qqK"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Pz9-jA-s3H" secondAttribute="bottom" constant="9" id="di1-DX-gM3"/>
+                            <constraint firstItem="Jas-vc-jne" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="hsY-n3-nEF"/>
+                            <constraint firstItem="Pz9-jA-s3H" firstAttribute="top" secondItem="Jas-vc-jne" secondAttribute="bottom" id="lga-8C-E5V"/>
+                            <constraint firstItem="Jas-vc-jne" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="na3-Tb-Fmj"/>
+                            <constraint firstItem="Pz9-jA-s3H" firstAttribute="trailing" secondItem="Jas-vc-jne" secondAttribute="trailing" id="wZF-gK-MUp"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="chooseImageButton" destination="Yxs-KW-5Nu" id="vUP-Se-9at"/>
+                        <outlet property="compareButton" destination="VaA-Zg-oIk" id="G6y-8b-6a0"/>
+                        <outlet property="filtersButton" destination="6NV-U1-3pJ" id="rdP-YY-PFH"/>
+                        <outlet property="imageState" destination="AI5-eA-a8n" id="Ru6-fE-aZW"/>
+                        <outlet property="mainImage" destination="Jas-vc-jne" id="nze-Vb-mJc"/>
+                        <outlet property="shareButton" destination="ckI-4m-jyr" id="XfX-F1-ybV"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="131.8840579710145" y="117.85714285714285"/>
+        </scene>
+    </scenes>
+</document>
