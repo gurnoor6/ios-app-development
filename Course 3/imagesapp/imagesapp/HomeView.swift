@@ -31,7 +31,7 @@ struct HomeView: View {
             }
         
             
-            .navigationBarTitle(Text("COFFEE DB"))
+            .navigationBarTitle(Text("Flick Flick"))
 //        }.accentColor(.white)
         
     }

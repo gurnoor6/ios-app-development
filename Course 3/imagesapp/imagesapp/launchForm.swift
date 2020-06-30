@@ -26,16 +26,30 @@ struct launchForm: View {
 //                }
                 
                 TextField("Tag 1", text:self.$t1)
-                TextField("Tag 2", text:self.$t2)
+                    .textFieldStyle(RoundedBorderTextFieldStyle())
+                TextField("Tag 2", text:self.$t2).textFieldStyle(RoundedBorderTextFieldStyle())
                 TextField("Tag 3", text:self.$t3)
+                .textFieldStyle(RoundedBorderTextFieldStyle())
                 NavigationLink(destination: HomeView(tags: [t1,t2,t3])){
-                               Text("Submit")
+                               SubmitButton()
                 }
-            }
-            .navigationBarTitle(Text("Animalia"))
+            }.padding(.leading,20)
+             .padding(.trailing,20)
+            .navigationBarTitle(Text("Photo Viewer"))
         }
         
          
+    }
+}
+
+struct SubmitButton:View{
+    var body: some View{
+        Text("Submit")
+        .frame(width:200,height:50)
+        .font(.headline)
+        .foregroundColor(.white)
+        .background(Color.black)
+        .cornerRadius(24)
     }
 }
 
