@@ -23,6 +23,8 @@
 		FE45EA1D24AA6B4D00D6B7D5 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE45EA1C24AA6B4D00D6B7D5 /* HomeView.swift */; };
 		FE45EA1F24AA71E000D6B7D5 /* imageDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE45EA1E24AA71E000D6B7D5 /* imageDetail.swift */; };
 		FE5B419224AB17B800C8D5D0 /* launchForm.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE5B419124AB17B800C8D5D0 /* launchForm.swift */; };
+		FE6A102624AB7C550003D959 /* testImageCaching.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE6A102524AB7C550003D959 /* testImageCaching.swift */; };
+		FE77FA9324AB52180091D4AC /* imageCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE77FA9224AB52180091D4AC /* imageCache.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -65,6 +67,8 @@
 		FE45EA1C24AA6B4D00D6B7D5 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		FE45EA1E24AA71E000D6B7D5 /* imageDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = imageDetail.swift; sourceTree = "<group>"; };
 		FE5B419124AB17B800C8D5D0 /* launchForm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = launchForm.swift; sourceTree = "<group>"; };
+		FE6A102524AB7C550003D959 /* testImageCaching.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = testImageCaching.swift; sourceTree = "<group>"; };
+		FE77FA9224AB52180091D4AC /* imageCache.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = imageCache.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -130,6 +134,8 @@
 				FE45EA1C24AA6B4D00D6B7D5 /* HomeView.swift */,
 				FE45EA1E24AA71E000D6B7D5 /* imageDetail.swift */,
 				FE5B419124AB17B800C8D5D0 /* launchForm.swift */,
+				FE77FA9224AB52180091D4AC /* imageCache.swift */,
+				FE6A102524AB7C550003D959 /* testImageCaching.swift */,
 			);
 			path = imagesapp;
 			sourceTree = "<group>";
@@ -301,7 +307,9 @@
 				FE45EA1B24AA682B00D6B7D5 /* imageRow.swift in Sources */,
 				FE45EA1924AA63E000D6B7D5 /* imageItem.swift in Sources */,
 				FE12685E24AA554C006D48E4 /* ContentView.swift in Sources */,
+				FE77FA9324AB52180091D4AC /* imageCache.swift in Sources */,
 				FE12685C24AA554C006D48E4 /* imagesapp.xcdatamodeld in Sources */,
+				FE6A102624AB7C550003D959 /* testImageCaching.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -471,6 +479,7 @@
 				DEVELOPMENT_TEAM = GVJBAV42HW;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = imagesapp/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -491,6 +500,7 @@
 				DEVELOPMENT_TEAM = GVJBAV42HW;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = imagesapp/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
