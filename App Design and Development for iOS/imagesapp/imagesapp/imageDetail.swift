@@ -59,7 +59,7 @@ struct imageDetail: View {
 struct OrderButton: View{
     var body: some View{
         Button(action:{}){
-            Text("Order Now")
+            Text("Like It!")
             .frame(width:200,height:50)
             .font(.headline)
             .foregroundColor(.white)
