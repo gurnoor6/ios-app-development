@@ -51,7 +51,7 @@ struct imageDetail: View {
         }
        
         .edgesIgnoringSafeArea(.top)
-    .navigationBarHidden(true)
+        .navigationBarHidden(true)
         
     }
 }

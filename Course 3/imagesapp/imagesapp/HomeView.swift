@@ -22,7 +22,7 @@ struct HomeView: View {
 //    }
     
     var body: some View {
-        NavigationView{
+//        NavigationView{
             List(tags, id:\.self){tag in
                 imageRow(category:tag)
                 .frame(height:450)
@@ -31,8 +31,9 @@ struct HomeView: View {
             }
         
             
-        .navigationBarTitle(Text("COFFEE DB"))
-        }.accentColor(.white)
+            .navigationBarTitle(Text("COFFEE DB"))
+//        }.accentColor(.white)
+        
     }
 }
 

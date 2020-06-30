@@ -16,7 +16,7 @@ struct launchForm: View {
     @State var number = 1
     var body: some View {
         NavigationView{
-            Form{
+            VStack{
 //                Stepper(value : $number, in: 1...5){
 //                    Text("\(number) tag\(number>1 ? "s" : "")")
 //                }
@@ -28,12 +28,14 @@ struct launchForm: View {
                 TextField("Tag 1", text:self.$t1)
                 TextField("Tag 2", text:self.$t2)
                 TextField("Tag 3", text:self.$t3)
-                
                 NavigationLink(destination: HomeView()){
-                    Text("Submit")
+                               Text("Submit")
                 }
             }
+            .navigationBarTitle(Text("Animalia"))
         }
+        
+         
     }
 }
 
