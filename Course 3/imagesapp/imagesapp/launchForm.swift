@@ -28,7 +28,7 @@ struct launchForm: View {
                 TextField("Tag 1", text:self.$t1)
                 TextField("Tag 2", text:self.$t2)
                 TextField("Tag 3", text:self.$t3)
-                NavigationLink(destination: HomeView()){
+                NavigationLink(destination: HomeView(tags: [t1,t2,t3])){
                                Text("Submit")
                 }
             }

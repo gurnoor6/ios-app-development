@@ -9,18 +9,18 @@
 import SwiftUI
 
 struct HomeView: View {
-    init(){
+    var tags:[String]
+    init(tags: [String]){
+        self.tags = tags
         UITableView.appearance().separatorColor = .clear
     }
-    
-    var tags:[String] = ["kitten","puppy"]
+
     
 //    var categories:[String:[Drink]]{
 //        .init(
 //            grouping: drinkData, by: {$0.category.rawValue}
 //        )
 //    }
-    
     var body: some View {
 //        NavigationView{
             List(tags, id:\.self){tag in
@@ -39,6 +39,6 @@ struct HomeView: View {
 
 struct HomeView_Previews: PreviewProvider {
     static var previews: some View {
-        HomeView()
+        HomeView(tags: ["puppy","bike"])
     }
 }
