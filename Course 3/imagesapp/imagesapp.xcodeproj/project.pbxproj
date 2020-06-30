@@ -22,6 +22,7 @@
 		FE45EA1B24AA682B00D6B7D5 /* imageRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE45EA1A24AA682B00D6B7D5 /* imageRow.swift */; };
 		FE45EA1D24AA6B4D00D6B7D5 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE45EA1C24AA6B4D00D6B7D5 /* HomeView.swift */; };
 		FE45EA1F24AA71E000D6B7D5 /* imageDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE45EA1E24AA71E000D6B7D5 /* imageDetail.swift */; };
+		FE5B419224AB17B800C8D5D0 /* launchForm.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE5B419124AB17B800C8D5D0 /* launchForm.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,6 +64,7 @@
 		FE45EA1A24AA682B00D6B7D5 /* imageRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = imageRow.swift; sourceTree = "<group>"; };
 		FE45EA1C24AA6B4D00D6B7D5 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		FE45EA1E24AA71E000D6B7D5 /* imageDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = imageDetail.swift; sourceTree = "<group>"; };
+		FE5B419124AB17B800C8D5D0 /* launchForm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = launchForm.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -127,6 +129,7 @@
 				FE45EA1A24AA682B00D6B7D5 /* imageRow.swift */,
 				FE45EA1C24AA6B4D00D6B7D5 /* HomeView.swift */,
 				FE45EA1E24AA71E000D6B7D5 /* imageDetail.swift */,
+				FE5B419124AB17B800C8D5D0 /* launchForm.swift */,
 			);
 			path = imagesapp;
 			sourceTree = "<group>";
@@ -292,6 +295,7 @@
 				FE45EA1724AA60FA00D6B7D5 /* imageLoader.swift in Sources */,
 				FE12685724AA554C006D48E4 /* AppDelegate.swift in Sources */,
 				FE12688A24AA5755006D48E4 /* ApiData.swift in Sources */,
+				FE5B419224AB17B800C8D5D0 /* launchForm.swift in Sources */,
 				FE45EA1F24AA71E000D6B7D5 /* imageDetail.swift in Sources */,
 				FE12685924AA554C006D48E4 /* SceneDelegate.swift in Sources */,
 				FE45EA1B24AA682B00D6B7D5 /* imageRow.swift in Sources */,

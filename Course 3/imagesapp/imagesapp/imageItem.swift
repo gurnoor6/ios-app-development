@@ -12,8 +12,8 @@ struct imageItem: View {
     
     var body: some View {
         ScrollView{
-            AsyncImage(url: URL(string: item.media.m.replacingOccurrences(of: "\\", with: ""))!, placeholder: Text("Loading..")
-            )
+            AsyncImage(url: URL(string: item.media.m.replacingOccurrences(of: "\\", with: ""))!, placeholder: Text("ColdBrew")
+                )
             .aspectRatio(contentMode: .fill)
             .frame(width:300,height: 300)
             .cornerRadius(10)
